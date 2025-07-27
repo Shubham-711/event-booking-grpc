@@ -67,7 +67,7 @@ python client.py
 🎥 Demo
 (Server & Client running side by side)
 
-D:\projects\event-booking-grpc\demo.gif
+![Demo](demo.gif)
 
 🛠 Example Commands
 Create Event
