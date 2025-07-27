@@ -1,3 +1,13 @@
+# 🎟️ gRPC Event Booking System  
+
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
+[![gRPC](https://img.shields.io/badge/gRPC-Python-green.svg)](https://grpc.io/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/Project-Active-brightgreen.svg)]()
+
+A **high‑performance microservice** for managing events and ticket bookings, built with **Python**, **gRPC**, **Protocol Buffers**, and **SQLite**.  
+
+
 🎟️ gRPC Event Booking System
 A high‑performance microservice for managing events and ticket bookings, built with Python, gRPC, Protocol Buffers, and SQLite.
 Users can create events, book tickets, cancel bookings, and list events via a Rich‑powered CLI client.
@@ -35,6 +45,7 @@ EVENT-BOOKING-GRPC/
 ├── README.md                      # Documentation
 └── .gitignore                     # Ignore venv/db backups
 🚀 Quickstart
+
 1️⃣ Clone the repository
 
 git clone https://github.com/shubham-711/event-booking-grpc.git
