@@ -47,29 +47,21 @@ EVENT-BOOKING-GRPC/
 🚀 Quickstart
 
 1️⃣ Clone the repository
-
 git clone https://github.com/shubham-711/event-booking-grpc.git
 cd event-booking-grpc
 2️⃣ Create & activate a virtual environment
-
 python -m venv venv
 # On Windows:
 venv\Scripts\activate
 # On Mac/Linux:
 source venv/bin/activate
 3️⃣ Install dependencies
-
-
 pip install -r requirements.txt
 4️⃣ Generate gRPC Python code
-
-
 python -m grpc_tools.protoc -I event_booking --python_out=event_booking --grpc_python_out=event_booking event_booking/event_booking.proto
 5️⃣ Start the server
-
 python server.py
 6️⃣ Run the client (in a new terminal)
-
 python client.py
 
 🎥 Demo
