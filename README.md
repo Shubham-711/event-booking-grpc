@@ -13,19 +13,19 @@ A high‑performance microservice for managing events and ticket bookings, built
 Users can create events, book tickets, cancel bookings, and list events via a Rich‑powered CLI client.
 
 ✨ Features
-Create Events with name & capacity.
+1-Create Events with name & capacity.
 
-Book Tickets with capacity checks (no overbooking).
+2-Book Tickets with capacity checks (no overbooking).
 
-Cancel Bookings with confirmation.
+3-Cancel Bookings with confirmation.
 
-List All Events with current booking status.
+4-List All Events with current booking status.
 
-Persistent Storage using SQLite (data remains after restart).
+5-Persistent Storage using SQLite (data remains after restart).
 
-Beautiful CLI using Rich.
+6-Beautiful CLI using Rich.
 
-Proper gRPC Error Handling (e.g., invalid IDs, full events).
+7-Proper gRPC Error Handling (e.g., invalid IDs, full events).
 
 📂 Project Structure
 graphql
@@ -48,20 +48,31 @@ EVENT-BOOKING-GRPC/
 
 1️⃣ Clone the repository
 git clone https://github.com/shubham-711/event-booking-grpc.git
-cd event-booking-grpc
+
+-cd event-booking-grpc
+
 2️⃣ Create & activate a virtual environment
-python -m venv venv
+
+-python -m venv venv
 # On Windows:
-venv\Scripts\activate
+-venv\Scripts\activate
 # On Mac/Linux:
-source venv/bin/activate
+-source venv/bin/activate
+
 3️⃣ Install dependencies
+
 pip install -r requirements.txt
+
 4️⃣ Generate gRPC Python code
-python -m grpc_tools.protoc -I event_booking --python_out=event_booking --grpc_python_out=event_booking event_booking/event_booking.proto
+
+python -m grpc_tools.protoc -I event_booking, --python_out=event_booking --grpc_python_out=event_booking,  event_booking/event_booking.proto
+
 5️⃣ Start the server
+
 python server.py
+
 6️⃣ Run the client (in a new terminal)
+
 python client.py
 
 🎥 Demo
@@ -70,17 +81,22 @@ python client.py
 ![Demo](demo.gif)
 
 🛠 Example Commands
+
 Create Event
+
 python client.py create --name "DEMO" --tickets 50
 
 Book Tickets
+
 python client.py book --id <id generated> --tickets 5
 
 List Events
+
 python client.py list
 
 
 🔮 Future Enhancements
+
 Real‑time streaming for live booking updates.
 
 User authentication & roles (Admin vs Attendee).
