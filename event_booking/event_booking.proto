@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+package eventbooking;
+
+// The service definition for booking events.
+service EventBooking {
+  rpc CreateEvent(CreateEventRequest) returns (Event) {}
+  rpc BookEvent(BookEventRequest) returns (BookingResponse) {}
+  rpc CancelBooking(CancelBookingRequest) returns (BookingResponse) {}
+  rpc ListEvents(ListEventsRequest) returns (ListEventsResponse) {}
+}
+
+// Represents an event.
+message Event {
+  string id = 1;
+  string name = 2;
+  int32 total_tickets = 3;
+  int32 booked_tickets = 4;
+}
+
+// ------ CreateEvent RPC ------
+message CreateEventRequest {
+  string name = 1;
+  int32 total_tickets = 2;
+}
+
+// ------ BookEvent RPC ------
+message BookEventRequest {
+  string event_id = 1;
+  int32 num_tickets = 2;
+}
+
+// ------ CancelBooking RPC ------
+message CancelBookingRequest {
+  string event_id = 1;
+  int32 num_tickets = 2;
+}
+
+// Generic response for booking and cancellation.
+message BookingResponse {
+  bool success = 1;
+  string message = 2;
+}
+
+// ------ ListEvents RPC ------
+message ListEventsRequest {
+  // No parameters needed to list all events.
+}
+
+message ListEventsResponse {
+  repeated Event events = 1;
+}
